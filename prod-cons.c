@@ -18,40 +18,33 @@
 #include <stdlib.h>
 #include <time.h>
 #include <sys/time.h>
+#include <math.h>
 
 #define QUEUESIZE 15
-#define LOOP 5
-
+#define LOOP 20
 #define nOfProducers  4
 #define nOfConsumers   3
 
-#define nOfFunctions 4
+#define nOfFunctions 5
+#define nOfArguments 16
+
+#define PI 3.14159265
+
+//FILE * fp ;
 
 void *producer (void *args);
 void *consumer (void *args);
 
+void * circleArea(void * args);
+void * circleCirCumf ( void * args);
+void * expo(void *args);
+void * sinF(void *args);
+void * cosF(void *args);
 
+void * (*functions[nOfFunctions]) (void * x) = { circleArea  , circleCirCumf , expo  , sinF , cosF};
 
-void * sum(void * a){
-  int c = *(int *)a + *(int *)a  ;
-
-  printf("HEEEY  (1) : %d \n " , c );
-}
-void * subtract(void *  a){
-    int c =5* (*(int *)a)  ;
-  printf("HEEEY  (2) : %d \n " , c );
-}
-void * mul(void * a){
-  int c = *(int *)a ;
-  printf("HEEEY (3)  \n");
-}
-void * dive(void * a){
-    int c = *(int *)a ;
-  printf("HEEEY  (4) \n");
-}
-
-void * (*functions[4]) (void * x) = {sum , subtract , mul , dive};
-
+int argu[16]={ 0  , 5   , 10 ,  15, 20  , 25   , 30 , 35 , 40 , 45  ,
+                    60   , 75   , 90   ,100 ,120 , 180 };
 
 
 typedef struct {
@@ -63,7 +56,7 @@ typedef struct {
 
 workFunction wf ;
 struct timeval tv;
-int argu=2;
+
 
 typedef struct {
   workFunction  buf[QUEUESIZE];
@@ -103,9 +96,15 @@ for(int i=0; i<nOfProducers ; i++){
  pthread_join(pro[i], NULL);
 }
 
-for(int i=0; i<nOfConsumers ; i++){
-  pthread_join(con[i], NULL);
-}
+
+//while(!fifo->empty){
+//  continue;
+//}
+
+// for(int i=0; i<nOfConsumers ; i++){
+//   pthread_join(con[i], NULL);
+// }
+
 
   queueDelete(fifo);
 
@@ -116,19 +115,20 @@ void *producer (void *q){
   queue *fifo;
   int i;
   fifo = (queue *)q;
+  int randF  , randAr ;
 
 
   for (i = 0; i < LOOP; i++) {
     pthread_mutex_lock (fifo->mut);
 
     while (fifo->full) {
-      printf ("producer: queue FULL.\n");
+    //  printf ("producer: queue FULL.\n");
       pthread_cond_wait (fifo->notFull, fifo->mut);
     }
-    int epilogi = (int)(rand()%4);
-    wf.work = functions[epilogi];
-    argu = (int)(rand()%10);
-    wf.arg = &argu;
+    randF = rand()%nOfFunctions;
+    wf.work = functions[randF];
+    randAr = rand()%nOfArguments;
+    wf.arg = &argu[randAr];
     gettimeofday(&tv, NULL);
     wf.tim=tv.tv_usec;
     queueAdd (fifo, wf);
@@ -149,14 +149,24 @@ void *consumer (void *q)
   while(1) {
     pthread_mutex_lock (fifo->mut);
     while (fifo->empty) {
-      printf ("consumer: queue EMPTY.\n");
-      pthread_cond_wait (fifo->notEmpty, fifo->mut);
+    pthread_cond_wait (fifo->notEmpty, fifo->mut);
   }
 
     queueDel (fifo, &wf);
     gettimeofday(&tv, NULL);
     wf.tim=tv.tv_usec - wf.tim ;
-    printf("h wra einai %ld \n" , wf.tim);
+    printf("Waiting time :  %ld \n" , wf.tim);
+
+//an to afisw etsi o xronos anevainei 2 takseis panw opote uparxei thema
+    // fp = fopen("waiting_time.txt","a+");
+    // if(fp == NULL)
+    // {
+    //   printf("Error at file \n ");
+    //   exit(1);
+    // }
+    // fprintf(fp,"%ld\n", wf.tim);
+    // fclose(fp);
+
     wf.work(wf.arg);
     pthread_mutex_unlock (fifo->mut);
     pthread_cond_signal (fifo->notFull);
@@ -223,4 +233,44 @@ void queueDel (queue *q, workFunction *out)
   q->full = 0;
 
   return;
+}
+
+
+
+void * circleArea(void * args){
+  double x = (*(int *)args);
+  double circleAr = PI  * x * x ;
+  printf("\nArea of circle is: %lf \n",circleAr );
+
+}
+
+void * circleCirCumf ( void * args){
+  double x = (*(int *)args);
+  double circleC =  2 * PI * x ;
+     printf("\nCircumference of circle is: %lf \n",circleC);
+}
+
+void * expo(void *args){
+    double x = (*(int *)args);
+    double result = exp(x/180);
+    printf("Exponential of %lf = %lf \n", x, result);
+
+}
+
+void * sinF(void *args){
+  double x = *(int *)args ;
+  double  ret, val;
+   val = PI / 180;
+   ret = sin(x*val);
+   printf("The sine of %lf is %lf degrees \n", x, ret);
+
+}
+
+void * cosF(void *args){
+  double x = *(int *)args ;
+  double  ret, val;
+   val = PI / 180;
+   ret = cos(x*val);
+   printf("The cosine of %lf is %lf degrees \n", x, ret);
+
 }
