@@ -25,15 +25,15 @@
 
 #include <math.h>
 
-#define QUEUESIZE 10000
-#define LOOP 50000
-#define nOfProducers 10
-#define nOfConsumers 40
+#define QUEUESIZE 20000
+#define LOOP 300000
+#define nOfProducers 4
+#define nOfConsumers 4
 #define nOfFunctions 5
 #define nOfArguments 16
 #define PI 3.14159265
 
-//FILE * fp ;
+
 
 void * producer(void * args);
 void * consumer(void * args);
@@ -57,9 +57,10 @@ int argu[16] = {  0,  5,  10,  15,  20,  25,  30,35,  40,  45,  60,  75,  90,  1
 typedef struct {
   void * ( * work)(void * );
   void * arg;
-  time_t waitingTime;
 }
 workFunction;
+
+struct timeval arrTime[QUEUESIZE];
 
 //workFunction wf ;
 //struct timeval tv;
@@ -67,6 +68,7 @@ workFunction;
 int prodFinished = 0;
 int terminateConFlag = 0;
 struct timeval timeStamp;
+
 
 double tempTime = 0;
 
@@ -129,7 +131,6 @@ void * producer(void * q) {
     pthread_mutex_lock(fifo -> mut);
 
     while (fifo -> full) {
-      //  printf ("producer: queue FULL.\n");
       pthread_cond_wait(fifo -> notFull, fifo -> mut);
     }
     workFunction wf;
@@ -137,9 +138,7 @@ void * producer(void * q) {
     wf.work = functions[randF];
     randAr = rand() % nOfArguments;
     wf.arg = & argu[randAr];
-    gettimeofday( & timeStamp, NULL);
-    wf.waitingTime = timeStamp.tv_usec;
-    //wf.tim=clock();
+    gettimeofday(&(arrTime[(fifo->tail)]),NULL);
     queueAdd(fifo, wf);
     pthread_mutex_unlock(fifo -> mut);
     pthread_cond_signal(fifo -> notEmpty);
@@ -162,8 +161,11 @@ void * consumer(void * q) {
   queue * fifo;
   int i, d;
   fifo = (queue * ) q;
+  struct timeval leaveTime ;
+  double waitingTime ;
 
   while (1) {
+
 
     pthread_mutex_lock(fifo -> mut);
 
@@ -178,23 +180,26 @@ void * consumer(void * q) {
       pthread_cond_broadcast(fifo -> notEmpty);
       break;
     }
-    workFunction wf;
-    queueDel(fifo, & wf);
-    gettimeofday( & timeStamp, NULL);
-    //wf.waitingTime=timeStamp.tv_usec- wf.waitingTime;
-    // wf.waitingTime = ((double) (clock() - wf.waitingTime) / CLOCKS_PER_SEC)*1000;
-    printf("Eksodos : %ld , Eisodos : %ld     , Waiting time : %ld \n", timeStamp.tv_usec, wf.waitingTime, timeStamp.tv_usec - wf.waitingTime);
-    wf.waitingTime = timeStamp.tv_usec - wf.waitingTime;
-    tempTime += wf.waitingTime;
+
+    workFunction wf ;
+
+
+    gettimeofday(&leaveTime,NULL);
+
+    waitingTime= (leaveTime.tv_sec -(arrTime[fifo->head]).tv_sec) *10e-6 + (leaveTime.tv_usec-(arrTime[fifo->head]).tv_usec) ;
+
+    queueDel(fifo, &wf);
+    tempTime += waitingTime;
+
+
+    pthread_mutex_unlock(fifo -> mut);
+    pthread_cond_signal(fifo -> notFull);
 
 
     wf.work(wf.arg);
-    pthread_mutex_unlock(fifo -> mut);
-    pthread_cond_signal(fifo -> notFull);
+
   }
-
   return (NULL);
-
 }
 
 queue * queueInit(void) {
