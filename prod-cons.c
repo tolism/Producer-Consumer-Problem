@@ -12,19 +12,14 @@
  */
 
 #include <pthread.h>
-
 #include <stdio.h>
-
 #include <unistd.h>
-
 #include <stdlib.h>
-
 #include <time.h>
-
 #include <sys/time.h>
-
 #include <math.h>
 
+// Defines for the queue and the prod/cons
 #define QUEUESIZE 20000
 #define LOOP 300000
 #define nOfProducers 4
@@ -35,9 +30,11 @@
 
 
 
+// Thread functions decleration
 void * producer(void * args);
 void * consumer(void * args);
 
+// Functions decleration
 void * circleArea(void * args);
 void * circleCirCumf(void * args);
 void * expo(void * args);
@@ -54,6 +51,7 @@ void * ( * functions[nOfFunctions])(void * x) = {
 
 int argu[16] = {  0,  5,  10,  15,  20,  25,  30,35,  40,  45,  60,  75,  90,  100,  120,  180};
 
+
 typedef struct {
   void * ( * work)(void * );
   void * arg;
@@ -62,16 +60,13 @@ workFunction;
 
 struct timeval arrTime[QUEUESIZE];
 
-//workFunction wf ;
-//struct timeval tv;
-
+// Global flags/counters/times
 int prodFinished = 0;
 int terminateConFlag = 0;
 struct timeval timeStamp;
-
-
 double tempTime = 0;
 
+// The queue
 typedef struct {
   workFunction buf[QUEUESIZE];
   long head, tail;
@@ -80,12 +75,14 @@ typedef struct {
   pthread_cond_t * notFull, * notEmpty;
 }
 queue;
-
+// Queue functions
 queue * queueInit(void);
 void queueDelete(queue * q);
 void queueAdd(queue * q, workFunction in );
 void queueDel(queue * q, workFunction * out);
+
 int main() {
+
 
   srand(time(NULL));
   queue * fifo;
@@ -96,7 +93,7 @@ int main() {
     fprintf(stderr, "main: Queue Init failed.\n");
     exit(1);
   }
-
+//Creating up the consumers / producers threads
   for (int i = 0; i < nOfConsumers; i++) {
     pthread_create( & con[i], NULL, consumer, fifo);
   }
@@ -105,6 +102,7 @@ int main() {
     pthread_create( & pro[i], NULL, producer, fifo);
   }
 
+//Waiting for the threads to join
   for (int i = 0; i < nOfProducers; i++) {
     pthread_join(pro[i], NULL);
   }
@@ -121,6 +119,7 @@ int main() {
   return 0;
 }
 
+//Producer thread function
 void * producer(void * q) {
   queue * fifo;
   int i;
@@ -133,11 +132,15 @@ void * producer(void * q) {
     while (fifo -> full) {
       pthread_cond_wait(fifo -> notFull, fifo -> mut);
     }
+    //Workfunction object to add at the queue
     workFunction wf;
+    //Randomly choose a function
     randF = rand() % nOfFunctions;
     wf.work = functions[randF];
+    //Randomly choose an argument
     randAr = rand() % nOfArguments;
     wf.arg = & argu[randAr];
+    //Getting the arrival time at the queue
     gettimeofday(&(arrTime[(fifo->tail)]),NULL);
     queueAdd(fifo, wf);
     pthread_mutex_unlock(fifo -> mut);
@@ -145,17 +148,18 @@ void * producer(void * q) {
   }
 
   prodFinished++;
+  //Termination condition for the consumers
   if (prodFinished == nOfProducers) {
 
     terminateConFlag = 1;
-
-
+    //Broadcast for the locked consumers
     pthread_cond_broadcast(fifo -> notEmpty);
   }
 
   return (NULL);
 }
 
+// Consumer thread function
 void * consumer(void * q) {
 
   queue * fifo;
@@ -174,34 +178,34 @@ void * consumer(void * q) {
 
       pthread_cond_wait(fifo -> notEmpty, fifo -> mut);
     }
-
+    //Termination flag for the consumers
     if (terminateConFlag == 1 && fifo -> empty == 1) {
       pthread_mutex_unlock(fifo -> mut);
       pthread_cond_broadcast(fifo -> notEmpty);
       break;
     }
 
+    //Workfunction object to remove from the queue
     workFunction wf ;
-
-
+    //Getting the leave time from the queuee
     gettimeofday(&leaveTime,NULL);
-
+    //Calculating the waiting time at the queue
     waitingTime= (leaveTime.tv_sec -(arrTime[fifo->head]).tv_sec) *10e-6 + (leaveTime.tv_usec-(arrTime[fifo->head]).tv_usec) ;
-
+    printf("The waiting time is : %lf  \n " , waitingTime );
     queueDel(fifo, &wf);
     tempTime += waitingTime;
 
 
     pthread_mutex_unlock(fifo -> mut);
     pthread_cond_signal(fifo -> notFull);
-
-
+    //Executing the work function outside the mutexes
     wf.work(wf.arg);
 
   }
   return (NULL);
 }
 
+//Queue function implementations
 queue * queueInit(void) {
   queue * q;
 
@@ -257,6 +261,7 @@ void queueDel(queue * q, workFunction * out) {
   return;
 }
 
+// Work function implementations
 void * circleArea(void * args) {
   double x = ( * (int * ) args);
   double circleAr = PI * x * x;
