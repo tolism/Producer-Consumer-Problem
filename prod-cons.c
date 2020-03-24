@@ -20,10 +20,10 @@
 #include <math.h>
 
 // Defines for the queue and the prod/cons
-#define QUEUESIZE 20000
-#define LOOP 300000
+#define QUEUESIZE 5000
+#define LOOP 30000
 #define nOfProducers 4
-#define nOfConsumers 4
+#define nOfConsumers 1
 #define nOfFunctions 5
 #define nOfArguments 16
 #define PI 3.14159265
@@ -165,7 +165,6 @@ void * consumer(void * q) {
   queue * fifo;
   int i, d;
   fifo = (queue * ) q;
-  struct timeval leaveTime ;
   double waitingTime ;
 
   while (1) {
@@ -188,10 +187,11 @@ void * consumer(void * q) {
     //Workfunction object to remove from the queue
     workFunction wf ;
     //Getting the leave time from the queuee
+    struct timeval leaveTime ;
     gettimeofday(&leaveTime,NULL);
     //Calculating the waiting time at the queue
-    waitingTime= (leaveTime.tv_sec -(arrTime[fifo->head]).tv_sec) *10e-6 + (leaveTime.tv_usec-(arrTime[fifo->head]).tv_usec) ;
-    printf("The waiting time is : %lf  \n " , waitingTime );
+    waitingTime= (leaveTime.tv_sec -(arrTime[fifo->head]).tv_sec) *1e6 + (leaveTime.tv_usec-(arrTime[fifo->head]).tv_usec) ;
+    //printf("The waiting time is : %lf  \n " , waitingTime );
     queueDel(fifo, &wf);
     tempTime += waitingTime;
 
