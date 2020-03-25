@@ -1,5 +1,5 @@
 # Producer-Consumer-Problem
-RTOS : 1st assignment
+Real Time Embedded Systems : 1st assignment
 
 The producer-consumer problem using pthreads 
 
