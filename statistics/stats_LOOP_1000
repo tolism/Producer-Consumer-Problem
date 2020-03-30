@@ -1,0 +1,645 @@
+1
+Getting statistics from file :   q512L1000_1_1.txt
+Calculating the mean for the first quarter
+Mean :  974533.66
+Calculating the mean for the second quarter
+Mean :  1327814.3
+Calculating the mean for the third quarter
+Mean :  92746.904
+Calculating the mean for the forth quarter
+Mean :  9997.819277108434
+Calculating statistics from all the data
+Mean in usec :  601.865038038038
+Median :  140237.0
+Min :  161.0
+Max :  2400573.0
+Std :  744970.930733486
+CV is : 1.2377707353827114
+Getting statistics from file :   q512L1000_1_2.txt
+Calculating the mean for the first quarter
+Mean :  454609.352
+Calculating the mean for the second quarter
+Mean :  837926.38
+Calculating the mean for the third quarter
+Mean :  1519303.156
+Calculating the mean for the forth quarter
+Mean :  2448890.7228915663
+Calculating statistics from all the data
+Mean in usec :  1314.0475595595594
+Median :  952117.0
+Min :  66011.0
+Max :  2840901.0
+Std :  787352.0141296053
+CV is : 0.599180759023295
+Getting statistics from file :   q512L1000_1_4.txt
+Calculating the mean for the first quarter
+Mean :  249692.72
+Calculating the mean for the second quarter
+Mean :  11959.956
+Calculating the mean for the third quarter
+Mean :  16405.088
+Calculating the mean for the forth quarter
+Mean :  9500.216867469879
+Calculating statistics from all the data
+Mean in usec :  71.95194694694695
+Median :  12470.0
+Min :  481.0
+Max :  643243.0
+Std :  143564.16989083536
+CV is : 1.9952784598961717
+Getting statistics from file :   q512L1000_1_8.txt
+Calculating the mean for the first quarter
+Mean :  15229.344
+Calculating the mean for the second quarter
+Mean :  5841.328
+Calculating the mean for the third quarter
+Mean :  2322.568
+Calculating the mean for the forth quarter
+Mean :  2226.714859437751
+Calculating statistics from all the data
+Mean in usec :  6.409171171171171
+Median :  3116.0
+Min :  101.0
+Max :  80037.0
+Std :  9987.092506553858
+CV is : 1.5582502385763055
+Getting statistics from file :   q512L1000_1_16.txt
+Calculating the mean for the first quarter
+Mean :  13912.684
+Calculating the mean for the second quarter
+Mean :  10083.308
+Calculating the mean for the third quarter
+Mean :  8524.356
+Calculating the mean for the forth quarter
+Mean :  7485.349397590361
+Calculating statistics from all the data
+Mean in usec :  10.003942942942944
+Median :  7750.0
+Min :  422.0
+Max :  86399.0
+Std :  9426.88475573695
+CV is : 0.9423169253865981
+Getting statistics from file :   q512L1000_1_32.txt
+Calculating the mean for the first quarter
+Mean :  11953.928
+Calculating the mean for the second quarter
+Mean :  6008.62
+Calculating the mean for the third quarter
+Mean :  1869.228
+Calculating the mean for the forth quarter
+Mean :  2037.6626506024097
+Calculating statistics from all the data
+Mean in usec :  5.4707927927927935
+Median :  2868.0
+Min :  90.0
+Max :  94420.0
+Std :  8779.315186462516
+CV is : 1.6047610499941363
+Getting statistics from file :   q512L1000_1_64.txt
+Calculating the mean for the first quarter
+Mean :  4581.512
+Calculating the mean for the second quarter
+Mean :  2014.824
+Calculating the mean for the third quarter
+Mean :  2339.12
+Calculating the mean for the forth quarter
+Mean :  2591.7630522088352
+Calculating statistics from all the data
+Mean in usec :  2.882095095095095
+Median :  2609.0
+Min :  97.0
+Max :  40708.0
+Std :  3860.729412372943
+CV is : 1.3395565673538463
+Getting statistics from file :   q512L1000_1_128.txt
+Calculating the mean for the first quarter
+Mean :  2627.868
+Calculating the mean for the second quarter
+Mean :  2079.644
+Calculating the mean for the third quarter
+Mean :  2375.652
+Calculating the mean for the forth quarter
+Mean :  2378.140562248996
+Calculating statistics from all the data
+Mean in usec :  2.3653133133133135
+Median :  2654.0
+Min :  105.0
+Max :  29204.0
+Std :  1846.816063528103
+CV is : 0.7807913028405936
+2
+Getting statistics from file :   q512L1000_2_1.txt
+Calculating the mean for the first quarter
+Mean :  2922883.392
+Calculating the mean for the second quarter
+Mean :  3770669.076
+Calculating the mean for the third quarter
+Mean :  4065137.234
+Calculating the mean for the forth quarter
+Mean :  1184951.7795591182
+Calculating statistics from all the data
+Mean in usec :  2986.811300150075
+Median :  3497943.0
+Min :  43746.0
+Max :  5254658.0
+Std :  1545295.8952262162
+CV is : 0.5173731246927354
+Getting statistics from file :   q512L1000_2_2.txt
+Calculating the mean for the first quarter
+Mean :  365855.288
+Calculating the mean for the second quarter
+Mean :  144332.346
+Calculating the mean for the third quarter
+Mean :  6324.674
+Calculating the mean for the forth quarter
+Mean :  40490.10821643287
+Calculating statistics from all the data
+Mean in usec :  139.30000900450224
+Median :  38497.0
+Min :  207.0
+Max :  864465.0
+Std :  197387.4398276085
+CV is : 1.416995169190756
+Getting statistics from file :   q512L1000_2_4.txt
+Calculating the mean for the first quarter
+Mean :  50244.21
+Calculating the mean for the second quarter
+Mean :  10033.776
+Calculating the mean for the third quarter
+Mean :  5763.92
+Calculating the mean for the forth quarter
+Mean :  8199.881763527053
+Calculating statistics from all the data
+Mean in usec :  18.565629814907453
+Median :  5942.0
+Min :  64.0
+Max :  209927.0
+Std :  28583.37175071113
+CV is : 1.539585353994284
+Getting statistics from file :   q512L1000_2_8.txt
+Calculating the mean for the first quarter
+Mean :  8191.782
+Calculating the mean for the second quarter
+Mean :  1912.714
+Calculating the mean for the third quarter
+Mean :  2426.618
+Calculating the mean for the forth quarter
+Mean :  2033.9879759519038
+Calculating statistics from all the data
+Mean in usec :  3.6420795397698846
+Median :  2007.0
+Min :  101.0
+Max :  82712.0
+Std :  6021.491671101867
+CV is : 1.653311413259887
+Getting statistics from file :   q512L1000_2_16.txt
+Calculating the mean for the first quarter
+Mean :  5461.352
+Calculating the mean for the second quarter
+Mean :  1699.428
+Calculating the mean for the third quarter
+Mean :  1661.56
+Calculating the mean for the forth quarter
+Mean :  2016.6533066132265
+Calculating statistics from all the data
+Mean in usec :  2.7100950475237617
+Median :  1451.0
+Min :  101.0
+Max :  101135.0
+Std :  5729.645475298344
+CV is : 2.114186172375604
+Getting statistics from file :   q512L1000_2_32.txt
+Calculating the mean for the first quarter
+Mean :  8804.01
+Calculating the mean for the second quarter
+Mean :  2156.522
+Calculating the mean for the third quarter
+Mean :  1916.632
+Calculating the mean for the forth quarter
+Mean :  1973.118236472946
+Calculating statistics from all the data
+Mean in usec :  3.71344072036018
+Median :  1784.0
+Min :  120.0
+Max :  109402.0
+Std :  7018.4578105437
+CV is : 1.8900147704156578
+Getting statistics from file :   q512L1000_2_64.txt
+Calculating the mean for the first quarter
+Mean :  2060.642
+Calculating the mean for the second quarter
+Mean :  1516.198
+Calculating the mean for the third quarter
+Mean :  1756.484
+Calculating the mean for the forth quarter
+Mean :  1991.939879759519
+Calculating statistics from all the data
+Mean in usec :  1.8312356178089044
+Median :  1225.0
+Min :  76.0
+Max :  64518.0
+Std :  2584.7608894131245
+CV is : 1.4114846086850485
+Getting statistics from file :   q512L1000_2_128.txt
+Calculating the mean for the first quarter
+Mean :  7288.486
+Calculating the mean for the second quarter
+Mean :  1997.35
+Calculating the mean for the third quarter
+Mean :  1751.442
+Calculating the mean for the forth quarter
+Mean :  1660.7254509018037
+Calculating statistics from all the data
+Mean in usec :  3.1752581290645323
+Median :  1573.0
+Min :  80.0
+Max :  539164.0
+Std :  12703.1656343594
+CV is : 4.000671793603722
+4
+Getting statistics from file :   q512L1000_4_1.txt
+Calculating the mean for the first quarter
+Mean :  3053728.911
+Calculating the mean for the second quarter
+Mean :  1790557.65
+Calculating the mean for the third quarter
+Mean :  1417639.335
+Calculating the mean for the forth quarter
+Mean :  1161114.6416416417
+Calculating statistics from all the data
+Mean in usec :  1855.9338392098025
+Median :  1474674.0
+Min :  2562.0
+Max :  4839639.0
+Std :  1033397.7015528488
+CV is : 0.5568074032169361
+Getting statistics from file :   q512L1000_4_2.txt
+Calculating the mean for the first quarter
+Mean :  1454607.851
+Calculating the mean for the second quarter
+Mean :  1843828.242
+Calculating the mean for the third quarter
+Mean :  1510805.021
+Calculating the mean for the forth quarter
+Mean :  1206357.005005005
+Calculating statistics from all the data
+Mean in usec :  1503.973933983496
+Median :  1525223.0
+Min :  24809.0
+Max :  2439705.0
+Std :  510201.24357882986
+CV is : 0.339235429584532
+Getting statistics from file :   q512L1000_4_4.txt
+Calculating the mean for the first quarter
+Mean :  270313.916
+Calculating the mean for the second quarter
+Mean :  213802.138
+Calculating the mean for the third quarter
+Mean :  756892.798
+Calculating the mean for the forth quarter
+Mean :  921440.5355355355
+Calculating statistics from all the data
+Mean in usec :  540.5171160290073
+Median :  582965.0
+Min :  671.0
+Max :  1111257.0
+Std :  353844.5963082872
+CV is : 0.6546408722592567
+Getting statistics from file :   q512L1000_4_8.txt
+Calculating the mean for the first quarter
+Mean :  19699.018
+Calculating the mean for the second quarter
+Mean :  17009.217
+Calculating the mean for the third quarter
+Mean :  24053.87
+Calculating the mean for the forth quarter
+Mean :  28327.48948948949
+Calculating statistics from all the data
+Mean in usec :  22.270884471117782
+Median :  8944.0
+Min :  149.0
+Max :  2041053.0
+Std :  53946.22805616745
+CV is : 2.4222759597234744
+Getting statistics from file :   q512L1000_4_16.txt
+Calculating the mean for the first quarter
+Mean :  6331.566
+Calculating the mean for the second quarter
+Mean :  2006.152
+Calculating the mean for the third quarter
+Mean :  2099.756
+Calculating the mean for the forth quarter
+Mean :  2296.944944944945
+Calculating statistics from all the data
+Mean in usec :  3.1838264566141534
+Median :  1762.0
+Min :  65.0
+Max :  479838.0
+Std :  11783.173073701813
+CV is : 3.7009470315893576
+Getting statistics from file :   q512L1000_4_32.txt
+Calculating the mean for the first quarter
+Mean :  3868.31
+Calculating the mean for the second quarter
+Mean :  2674.458
+Calculating the mean for the third quarter
+Mean :  2167.752
+Calculating the mean for the forth quarter
+Mean :  1977.4264264264264
+Calculating statistics from all the data
+Mean in usec :  2.672160290072518
+Median :  1590.0
+Min :  92.0
+Max :  485021.0
+Std :  8824.59580583426
+CV is : 3.3024200825897223
+Getting statistics from file :   q512L1000_4_64.txt
+Calculating the mean for the first quarter
+Mean :  2537.193
+Calculating the mean for the second quarter
+Mean :  2273.999
+Calculating the mean for the third quarter
+Mean :  2145.872
+Calculating the mean for the forth quarter
+Mean :  2240.3183183183182
+Calculating statistics from all the data
+Mean in usec :  2.299360340085021
+Median :  1479.0
+Min :  97.0
+Max :  54370.0
+Std :  3181.7607806612086
+CV is : 1.3837590938632784
+Getting statistics from file :   q512L1000_4_128.txt
+Calculating the mean for the first quarter
+Mean :  15933.636
+Calculating the mean for the second quarter
+Mean :  9394.548
+Calculating the mean for the third quarter
+Mean :  6095.644
+Calculating the mean for the forth quarter
+Mean :  11939.984984984985
+Calculating statistics from all the data
+Mean in usec :  10.8406784196049
+Median :  4419.0
+Min :  174.0
+Max :  5804092.0
+Std :  110827.45741932647
+CV is : 10.223295363037407
+8
+Getting statistics from file :   q512L1000_8_1.txt
+Calculating the mean for the first quarter
+Mean :  1365596.5845
+Calculating the mean for the second quarter
+Mean :  1771200.3185
+Calculating the mean for the third quarter
+Mean :  1690433.2295
+Calculating the mean for the forth quarter
+Mean :  1644708.7713856928
+Calculating statistics from all the data
+Mean in usec :  1617.981385048131
+Median :  1659269.0
+Min :  81052.0
+Max :  2427007.0
+Std :  381923.3216640274
+CV is : 0.23604926805302281
+Getting statistics from file :   q512L1000_8_2.txt
+Calculating the mean for the first quarter
+Mean :  2410214.132
+Calculating the mean for the second quarter
+Mean :  1668224.4035
+Calculating the mean for the third quarter
+Mean :  1571065.892
+Calculating the mean for the forth quarter
+Mean :  1461512.2046023011
+Calculating statistics from all the data
+Mean in usec :  1777.7936932116513
+Median :  1595824.0
+Min :  29321.0
+Max :  4447629.0
+Std :  650062.5575640675
+CV is : 0.36565691511128323
+Getting statistics from file :   q512L1000_8_4.txt
+Calculating the mean for the first quarter
+Mean :  1781660.996
+Calculating the mean for the second quarter
+Mean :  1798990.563
+Calculating the mean for the third quarter
+Mean :  1717499.653
+Calculating the mean for the forth quarter
+Mean :  1816403.803901951
+Calculating statistics from all the data
+Mean in usec :  1778.6340327540943
+Median :  1709948.0
+Min :  90607.0
+Max :  2948501.0
+Std :  415846.6016732274
+CV is : 0.23380110467655738
+Getting statistics from file :   q512L1000_8_8.txt
+Calculating the mean for the first quarter
+Mean :  810508.6685
+Calculating the mean for the second quarter
+Mean :  1533779.3465
+Calculating the mean for the third quarter
+Mean :  1094197.9555
+Calculating the mean for the forth quarter
+Mean :  998628.1770885442
+Calculating statistics from all the data
+Mean in usec :  1109.2923699212402
+Median :  1130915.0
+Min :  5053.0
+Max :  2100610.0
+Std :  376310.29976095806
+CV is : 0.3392345516517671
+Getting statistics from file :   q512L1000_8_16.txt
+Calculating the mean for the first quarter
+Mean :  3528.4385
+Calculating the mean for the second quarter
+Mean :  2685.271
+Calculating the mean for the third quarter
+Mean :  2757.1375
+Calculating the mean for the forth quarter
+Mean :  2272.5797898949477
+Calculating statistics from all the data
+Mean in usec :  2.810923990498812
+Median :  1785.0
+Min :  84.0
+Max :  69705.0
+Std :  3874.00882317252
+CV is : 1.3781976447129252
+Getting statistics from file :   q512L1000_8_32.txt
+Calculating the mean for the first quarter
+Mean :  4141.111
+Calculating the mean for the second quarter
+Mean :  2678.452
+Calculating the mean for the third quarter
+Mean :  4274.577
+Calculating the mean for the forth quarter
+Mean :  2402.36068034017
+Calculating statistics from all the data
+Mean in usec :  3.374246655831979
+Median :  1792.0
+Min :  76.0
+Max :  1996843.0
+Std :  24247.074438138814
+CV is : 7.18592234394918
+Getting statistics from file :   q512L1000_8_64.txt
+Calculating the mean for the first quarter
+Mean :  3571.0355
+Calculating the mean for the second quarter
+Mean :  2738.797
+Calculating the mean for the third quarter
+Mean :  2259.2665
+Calculating the mean for the forth quarter
+Mean :  2238.445222611306
+Calculating statistics from all the data
+Mean in usec :  2.701943992999125
+Median :  1626.0
+Min :  68.0
+Max :  631434.0
+Std :  10414.030166722334
+CV is : 3.8542731432278456
+Getting statistics from file :   q512L1000_8_128.txt
+Calculating the mean for the first quarter
+Mean :  7934.279
+Calculating the mean for the second quarter
+Mean :  2603.58
+Calculating the mean for the third quarter
+Mean :  2665.0485
+Calculating the mean for the forth quarter
+Mean :  2441.3486743371686
+Calculating statistics from all the data
+Mean in usec :  3.9112477809726216
+Median :  1783.0
+Min :  89.0
+Max :  9210331.0
+Std :  103059.62758933645
+CV is : 26.34955220446512
+16
+Getting statistics from file :   q512L1000_16_1.txt
+Calculating the mean for the first quarter
+Mean :  10413888.04075
+Calculating the mean for the second quarter
+Mean :  1499055.1885
+Calculating the mean for the third quarter
+Mean :  1495273.53525
+Calculating the mean for the forth quarter
+Mean :  1417901.5956489122
+Calculating statistics from all the data
+Mean in usec :  3706.672638227389
+Median :  1504963.0
+Min :  120842.0
+Max :  70630032.0
+Std :  11942228.16906803
+CV is : 3.2218189558760333
+Getting statistics from file :   q512L1000_16_2.txt
+Calculating the mean for the first quarter
+Mean :  1912076.23675
+Calculating the mean for the second quarter
+Mean :  1734227.899
+Calculating the mean for the third quarter
+Mean :  1669810.78275
+Calculating the mean for the forth quarter
+Mean :  1522736.2983245812
+Calculating statistics from all the data
+Mean in usec :  1709.7244909681854
+Median :  1638744.0
+Min :  101716.0
+Max :  3123268.0
+Std :  312736.90611247835
+CV is : 0.18291655045274646
+Getting statistics from file :   q512L1000_16_4.txt
+Calculating the mean for the first quarter
+Mean :  1749273.52475
+Calculating the mean for the second quarter
+Mean :  1686628.3705
+Calculating the mean for the third quarter
+Mean :  1615189.44425
+Calculating the mean for the forth quarter
+Mean :  1483289.6676669167
+Calculating statistics from all the data
+Mean in usec :  1633.604646477905
+Median :  1591186.0
+Min :  68924.0
+Max :  2885172.0
+Std :  282230.7107265054
+CV is : 0.17276561457816755
+Getting statistics from file :   q512L1000_16_8.txt
+Calculating the mean for the first quarter
+Mean :  1629346.06525
+Calculating the mean for the second quarter
+Mean :  1730865.521
+Calculating the mean for the third quarter
+Mean :  1667318.48175
+Calculating the mean for the forth quarter
+Mean :  1422163.416104026
+Calculating statistics from all the data
+Mean in usec :  1612.4352630164385
+Median :  1621229.0
+Min :  1990.0
+Max :  2936904.0
+Std :  364366.5955672239
+CV is : 0.2259728523212713
+Getting statistics from file :   q512L1000_16_16.txt
+Calculating the mean for the first quarter
+Mean :  569469.9855
+Calculating the mean for the second quarter
+Mean :  1623053.962
+Calculating the mean for the third quarter
+Mean :  1479457.91475
+Calculating the mean for the forth quarter
+Mean :  909179.8387096775
+Calculating statistics from all the data
+Mean in usec :  1145.305183073942
+Median :  1441879.0
+Min :  82.0
+Max :  2292245.0
+Std :  629392.9465157136
+CV is : 0.549541690561859
+Getting statistics from file :   q512L1000_16_32.txt
+Calculating the mean for the first quarter
+Mean :  3467.493
+Calculating the mean for the second quarter
+Mean :  3182.647
+Calculating the mean for the third quarter
+Mean :  2565.76875
+Calculating the mean for the forth quarter
+Mean :  2308.030507626907
+Calculating statistics from all the data
+Mean in usec :  2.881020626289143
+Median :  1800.0
+Min :  84.0
+Max :  380013.0
+Std :  5941.750499559201
+CV is : 2.0623769386935584
+Getting statistics from file :   q512L1000_16_64.txt
+Calculating the mean for the first quarter
+Mean :  3021.69525
+Calculating the mean for the second quarter
+Mean :  2663.2425
+Calculating the mean for the third quarter
+Mean :  2488.9855
+Calculating the mean for the forth quarter
+Mean :  2332.5953988497126
+Calculating statistics from all the data
+Mean in usec :  2.6266480405025314
+Median :  1664.0
+Min :  76.0
+Max :  492877.0
+Std :  6023.033403882239
+CV is : 2.2930492822060433
+Getting statistics from file :   q512L1000_16_128.txt
+Calculating the mean for the first quarter
+Mean :  3061.03825
+Calculating the mean for the second quarter
+Mean :  2582.447
+Calculating the mean for the third quarter
+Mean :  2524.8955
+Calculating the mean for the forth quarter
+Mean :  2431.9984996249063
+Calculating statistics from all the data
+Mean in usec :  2.6501084442777674
+Median :  1664.0
+Min :  85.0
+Max :  578524.0
+Std :  7109.961589754974
+CV is : 2.6828945830904094

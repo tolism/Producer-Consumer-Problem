@@ -1,0 +1,9 @@
+function runtest1 
+                                      for i in 1 2 4 8 16 
+                                          for j in 1 2 4 8 16 32 64 128 
+                                              echo Producers : $i Consumers $j 
+                                              ./s $i $j >> ./stats1/q512L1000_"$i"_"$j".txt
+                                              sleep 5
+                                          end
+                                      end
+                                  end 
