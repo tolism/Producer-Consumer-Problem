@@ -19,7 +19,7 @@ To execute the versions
 Pthread library.
 ### Statistics
 
-/***
+
 \begin{table}[]
 \centering
 \caption{My caption}
@@ -31,7 +31,7 @@ Cat     & Soccer     & Apple  \\ \hline
 Dog     & Basketball & Orange \\ \hline
 \end{tabular}
 \end{table}
-***/
+
 
 ## Author
 
