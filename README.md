@@ -19,7 +19,7 @@ The statistic file contains the three texts with the overall stastics of the run
 Pthread library.
 
 
-### Waiting Time (nanosec)  for LOOP = 50k and QUEUESIZE = 512 
+### SOme Waiting Times (nanosec)  for LOOP = 50k and QUEUESIZE = 512 
 
 Mean Waiting TIme | First Quarter | Second Quarter | Third Quarter | Fourth Quarter | Overall 
 --- | --- | --- | --- |--- |--- 
