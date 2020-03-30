@@ -17,20 +17,6 @@ To execute the versions
 ### Prerequisites
 
 Pthread library.
-### Statistics
-
-
-\begin{table}[]
-\centering
-\caption{My caption}
-\label{my-label}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{First Quarter} & \textbf{Second Quarter}  & \textbf{Third Quarer} & \textbf{Fourth Quarer} & \textbf{Overall }\\ \hline
-Cat     & Soccer     & Apple  \\ \hline
-Dog     & Basketball & Orange \\ \hline
-\end{tabular}
-\end{table}
 
 
 ## Author
