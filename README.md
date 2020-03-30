@@ -19,11 +19,19 @@ The statistic file contains the three texts with the overall stastics of the run
 Pthread library.
 
 
-### Statistic for LOOP = 50k and QUEUESIZE = 512 
+### Some Statistics for LOOP = 50k and QUEUESIZE = 512 
 
 Mean Waiting TIme | First Quarter | Second Quarter | Third Quarter | Fourth Quarter | Overall 
 --- | --- | --- | --- |--- |--- 
-Seconds | 301 | 283 | 290 | 286 | 289
+P:1 Q:8 | 2337.312 | 2229.378 | 2038.541 | 2081.723 | 2171.739
+P:2 Q:32 | 1947.161 | 1703.986 | 1694.448 | 1677.839 | 1755.859
+P:8 Q:1 | 1947.161 | 1703.986 | 1694.448 | 1677.839 | 1755.859
+P:2 Q:32 | 1488797.723 | 1441082.254 | 1438194.836 | 1582564.106 | 1585648.512
+P:16 Q:32 | 2723.709 | 2966.451 | 2993.526 | 2924.595 | 2902.072
+
+
+
+
 
 ## Author
 
