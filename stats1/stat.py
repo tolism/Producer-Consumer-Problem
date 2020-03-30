@@ -35,8 +35,7 @@ def results(prodI , consJ):
 
 
     mm =  np.mean(V0 ,  dtype=np.float64)
-    print("Mean : " ,mm )
-    print(mm/1000)
+    print("Mean in usec : " ,mm/1000)
     print("Median : "  , np.median(V0) )
     print("Min : " , np.amin(V0) )
     print("Max : " , np.amax(V0) )
