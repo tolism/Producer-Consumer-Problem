@@ -12,8 +12,17 @@ To execute the versions
  ./s
 
 ```
+The statistic file contains the three texts with the overall stastics of the runs and the python script that calculated them. To take fast the results from the simulations.c I used the following fish script
 
-
+ function runtest
+                                      for i in 1 2 4 8 16 
+                                          for j in 1 2 4 8 16 32 64 128 
+                                              echo Producers : $i Consumers $j 
+                                              ./s $i $j >> ./stats1/q512L1000_"$i"_"$j".txt
+                                              sleep 5
+                                          end
+                                      end
+                                  end 
 ### Prerequisites
 
 Pthread library.
