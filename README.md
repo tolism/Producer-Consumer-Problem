@@ -18,6 +18,9 @@ To execute the versions
 
 Pthread library.
 
+
+### Statistic for LOOP = 50k and QUEUESIZE = 512 
+
 Mean Waiting TIme | First Quarter | Second Quarter | Third Quarter | Fourth Quarter | Overall 
 --- | --- | --- | --- |--- |--- 
 Seconds | 301 | 283 | 290 | 286 | 289
