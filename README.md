@@ -12,14 +12,14 @@ To execute the versions
  ./s
 
 ```
-The statistic file contains the three texts with the overall stastics of the runs and the python script that calculated them. To take fast the results from the simulations.c I used the fish shell function inside the folder , which executes for combinations of different producers / consumers and saves the results at the txt's 
+The statistics file contains the three texts with the overall stastics of the runs and the python script that calculated them. To take fast the results from the simulations.c I used the fish shell function inside the folder , which executes for combinations of different producers / consumers and saves the results at the txt's 
 
 ### Prerequisites
 
 Pthread library.
 
 
-### SOme Waiting Times (nanosec)  for LOOP = 50k and QUEUESIZE = 512 
+### Some Waiting Times (nanosec)  for LOOP = 50k and QUEUESIZE = 512 
 
 Mean Waiting TIme | First Quarter | Second Quarter | Third Quarter | Fourth Quarter | Overall 
 --- | --- | --- | --- |--- |--- 
